@@ -1,18 +1,17 @@
 import React, {  useState, useContext } from 'react';
-// import { Link, useLocation } from 'react-router-dom';
-// import { MyContext } from '../AppProvider';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import { MyContext } from '../AppProvider';
 
 const Sidemenu = () => {
     // const location = useLocation();
 
-    // const { isClassAdded, setIsClassAdded } = useContext(MyContext)
+    const { isClassAdded, setIsClassAdded } = useContext(MyContext)
     const [activeMenuItem, setActiveMenuItem] = useState(null);
 
     // const HandleNavlinksActive = () => {
     //     setIsClassAdded((pre) => { return !pre })
     // }
-    const isClassAdded = true
+
 
     const sidebarClassName = isClassAdded ? 'sidebar hide' : 'sidebar';
 

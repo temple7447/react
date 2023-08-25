@@ -1,17 +1,17 @@
-// import { useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import Sidemenu from './Component/Sidemenu'
 import DarkModeSwitch from './Component/DarkModeSwitch'
 import SearchButton from './Component/SearchButton'
-// import { MyContext } from './AppProvider'
+import { MyContext } from './AppProvider'
 
 import { Outlet ,NavLink} from 'react-router-dom'
 
 function Unique() {
-    // const [count, setCount] = useState(0)
-    // const { isClassAdded, setIsClassAdded } = useContext(MyContext)
+    const [count, setCount] = useState(0)
+    const { isClassAdded, setIsClassAdded } = useContext(MyContext)
 
     const HandleChange = () => {
-        // setIsClassAdded(!isClassAdded)
+        setIsClassAdded(!isClassAdded)
     }
 
 
