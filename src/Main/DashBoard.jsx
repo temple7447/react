@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const DashBoard = () => {
 
@@ -57,18 +58,18 @@ const DashBoard = () => {
                     <h1>Dashboard</h1>
                     <ul className="breadcrumb">
                         <li>
-                            <a href="#">Dashboard</a>
+                            <NavLink to="#">Dashboard</NavLink>
                         </li>
                         <li><i className='bx bx-chevron-right' ></i></li>
                         <li>
-                            <a className="active" href="#">Home</a>
+                            <NavLink className="active" to="#">Home</NavLink>
                         </li>
                     </ul>
                 </div>
-                <a href="#" className="btn-download">
+                <NavLink to="#" className="btn-download">
                     <i className='bx bxs-cloud-download' ></i>
                     <span className="text">Download PDF</span>
-                </a>
+                </NavLink>
             </div>
 
             <ul className="box-info">

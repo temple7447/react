@@ -1,17 +1,18 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, {  useState, useContext } from 'react';
 // import { Link, useLocation } from 'react-router-dom';
-import { MyContext } from '../AppProvider';
+// import { MyContext } from '../AppProvider';
 import { NavLink } from 'react-router-dom';
 
 const Sidemenu = () => {
     // const location = useLocation();
 
-    const { isClassAdded, setIsClassAdded } = useContext(MyContext)
+    // const { isClassAdded, setIsClassAdded } = useContext(MyContext)
     const [activeMenuItem, setActiveMenuItem] = useState(null);
 
-    const HandleNavlinksActive = () => {
-        setIsClassAdded((pre) => { return !pre })
-    }
+    // const HandleNavlinksActive = () => {
+    //     setIsClassAdded((pre) => { return !pre })
+    // }
+    const isClassAdded = true
 
     const sidebarClassName = isClassAdded ? 'sidebar hide' : 'sidebar';
 
@@ -31,10 +32,10 @@ const Sidemenu = () => {
     return (
 
         <section className={sidebarClassName} >
-            <a href="#" className="brand">
+            <NavLink to="#" className="brand">
                 <i className='bx bxs-smile'></i>
                 <span className="text">Admin Dashboard</span>
-            </a>
+            </NavLink>
             <ul className="side-menu top" >
                 {menuItems.map((item, index) => (
                     <li
@@ -54,10 +55,10 @@ const Sidemenu = () => {
             </ul>
             <ul className="side-menu">
                 <li>
-                    <a href="#" className="logout">
+                    <NavLink to="#" className="logout">
                         <i className='bx bxs-log-out-circle' ></i>
                         <span className="text">Logout</span>
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </section>
