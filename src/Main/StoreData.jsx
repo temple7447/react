@@ -1,7 +1,7 @@
 import{ useState, useEffect , useContext} from 'react'
 import './Style.css'
 import Box from '../Multi/Box';
-import firebase, { app, database, storage, auth } from '../../firebase'
+import firebase, { app, database, storage, auth } from '../firebase'
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { MyContext } from '../AppProvider';
 import { options } from '../Data/Categories'
